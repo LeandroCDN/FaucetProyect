@@ -1,16 +1,17 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.22 <0.9.0;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol";
-import "@openzeppelin/contracts/access/AccessControlEnumerable.sol";
+import "../../node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "../../node_modules/@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
+import "../../node_modules/@openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol";
+import "../../node_modules/@openzeppelin/contracts/access/AccessControlEnumerable.sol";
 //import "../contracts/TransactionFee.sol";
 
-contract TuviellaToken is ERC20, ERC20Burnable, ERC20Pausable, AccessControlEnumerable {
+contract PatoCoin is ERC20, ERC20Burnable, ERC20Pausable, AccessControlEnumerable {
   bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
   bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
-
+  
+  address public owner;
   uint public maxSupply = 100000000 ether;
   uint public supply = 0;
   
@@ -22,14 +23,15 @@ contract TuviellaToken is ERC20, ERC20Burnable, ERC20Pausable, AccessControlEnum
    * See {ERC20-constructor}.
    */
   constructor(address masterChef) ERC20('Pato Verde', 'PATO') {
-    uint initial = 1000000 ether;
+    uint initial = 10000000 ether;
     _mint(masterChef, initial);
     _setupRole(DEFAULT_ADMIN_ROLE, _msgSender());
+    owner = msg.sender;
 
     _setupRole(MINTER_ROLE, _msgSender());
     _setupRole(PAUSER_ROLE, _msgSender());
 
-    lastTransfer = _msgSender();
+    
   }
 
   /**
@@ -78,10 +80,10 @@ contract TuviellaToken is ERC20, ERC20Burnable, ERC20Pausable, AccessControlEnum
 
   function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual override(ERC20, ERC20Pausable){ }
 
-  function transfer(address sender, address recipient, uint256 amount) internal virtual override(ERC20){ 
+  /*function transfer(address sender, address recipient, uint256 amount) internal virtual override(ERC20){ 
        
     super._transfer(sender, recipient, amount);
-  }
+  }*/
 
 
 
