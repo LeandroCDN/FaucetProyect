@@ -63,6 +63,7 @@ contract Faucet is AccessControlEnumerable{
   }
 
   function vaciarFaucet(address token) external onlyOwner(token){
+    //Require
     IERC20(token).transfer(_msgSender(), IERC20(token).balanceOf(address(this)));
   }
 
