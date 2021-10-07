@@ -1,5 +1,7 @@
-const patoToken = artifacts.require('patoToken')
+const PatoCoin = artifacts.require('PatoCoin')
+
 
 module.exports = function(deployer) {
-  deployer.deploy(patoToken, 0x86271A765c26e73F184bB85dCf270BF83c288365)
+  deployer.deploy(PatoCoin, accounts[0])
 }
+
