@@ -19,7 +19,7 @@ echo  8    Start Git Bash x86
 echo  9    Exit
 echo ------------------------------------------------------------------------------
 echo.
-SET /p var= ^> Choose an option [1-5]:
+SET /p var= ^> Choose an option [1-9]:
 if "%var%"=="1" goto global
 if "%var%"=="2" goto packages
 if "%var%"=="3" goto tcompile

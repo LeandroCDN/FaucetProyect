@@ -7,6 +7,7 @@
 
 # testing
 /coverage
+<<<<<<< HEAD
 cypress/videos
 cypress/screenshots
 cypress/fixtures/example.json
@@ -15,23 +16,35 @@ cypress/fixtures/example.json
 /.next/
 /out/
 .idea/
+=======
+>>>>>>> 4e4d4a2b7f9e702207f0bea51313fce6083239a4
 
 # production
 /build
 
 # misc
 .DS_Store
+<<<<<<< HEAD
 .eslintcache
 
 # local env files
+=======
+.env
+>>>>>>> 4e4d4a2b7f9e702207f0bea51313fce6083239a4
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
+<<<<<<< HEAD
 # debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 debug.log*
 
+=======
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+>>>>>>> 4e4d4a2b7f9e702207f0bea51313fce6083239a4
