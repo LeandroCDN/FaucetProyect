@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "pancake-frontend",
   "version": "0.1.0",
   "private": true,
@@ -148,9 +147,8 @@
     "source-map-explorer": "^2.5.2",
     "start-server-and-test": "^1.14.0",
     "ts-node": "^9.1.1"
-  }
-=======
-  "name": "defi-tutorial",
+  },
+ "name": "defi-tutorial",
   "version": "0.1.0",
   "description": "DeFi Token Staking App",
   "author": "gregory@dappuniversity.com",
@@ -188,5 +186,4 @@
     "not ie <= 11",
     "not op_mini all"
   ]
->>>>>>> 4e4d4a2b7f9e702207f0bea51313fce6083239a4
 }
