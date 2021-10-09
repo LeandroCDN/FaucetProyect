@@ -8,7 +8,6 @@ import {
   UserMenuDivider,
   UserMenuItem,
 } from '@pancakeswap/uikit'
-import styled from 'styled-components'
 import history from 'routerHistory'
 import useAuth from 'hooks/useAuth'
 import { useProfile } from 'state/profile/hooks'
@@ -33,7 +32,7 @@ const UserMenu = () => {
   const hasLowBnbBalance = fetchStatus === FetchStatus.SUCCESS && balance.lte(LOW_BNB_BALANCE)
 
   if (!account) {
-    return <ConnectWalletButton scale="md" />
+    return <ConnectWalletButton scale="sm" />
   }
 
   return (
@@ -42,9 +41,15 @@ const UserMenu = () => {
       <UserMenuItem as="button" onClick={onPresentTransactionModal}>
         {t('Transactions')}
       </UserMenuItem>
+      <UserMenuDivider />
+      <UserMenuItem as="button" onClick={() => history.push(`${nftsBaseUrl}/profile/${account.toLowerCase()}`)}>
+        {t('Your NFTs')}
+      </UserMenuItem>
+      <ProfileUserMenuItem isLoading={isLoading} hasProfile={hasProfile} />
+      <UserMenuDivider />
       <UserMenuItem as="button" onClick={logout}>
         <Flex alignItems="center" justifyContent="space-between" width="100%">
-          {t('Disconnect Wallet')}
+          {t('Disconnect')}
           <LogoutIcon />
         </Flex>
       </UserMenuItem>

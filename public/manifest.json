@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "short_name": "PancakeSwap",
   "name": "PancakeSwap",
   "description": "Farm CAKE with Pancake LP Tokens",
@@ -21,19 +20,4 @@
       "sizes": "512x512"
     }
   ]
-=======
-  "short_name": "Starter Kit",
-  "name": "Dapp Token Farm",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
->>>>>>> 4e4d4a2b7f9e702207f0bea51313fce6083239a4
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Box, Button, Flex, InjectedModalProps, LinkExternal, Message, Skeleton, Text } from '@pancakeswap/uikit'
-import styled from 'styled-components'
 import { useWeb3React } from '@web3-react/core'
 import useTokenBalance, { FetchStatus, useGetBnbBalance } from 'hooks/useTokenBalance'
 import useAuth from 'hooks/useAuth'
@@ -9,7 +8,6 @@ import { getBscScanLink } from 'utils'
 import { getFullDisplayBalance, formatBigNumber } from 'utils/formatBalance'
 import tokens from 'config/constants/tokens'
 import CopyAddress from './CopyAddress'
-
 
 interface WalletInfoProps {
   hasLowBnbBalance: boolean
@@ -27,14 +25,10 @@ const WalletInfo: React.FC<WalletInfoProps> = ({ hasLowBnbBalance, onDismiss }) 
     onDismiss()
     logout()
   }
-const Button1 = styled(Button)`
-border-color: #F00B0B;
-color: #F00B0B;
-`
 
   return (
     <>
-      <Text color="secondary" fontSize="14px" textTransform="uppercase" fontWeight="bold" mb="8px">
+      <Text color="secondary" fontSize="12px" textTransform="uppercase" fontWeight="bold" mb="8px">
         {t('Your Address')}
       </Text>
       <CopyAddress account={account} mb="24px" />
@@ -47,7 +41,7 @@ color: #F00B0B;
         </Message>
       )}
       <Flex alignItems="center" justifyContent="space-between">
-        <Text color="textSubtle" fontWeight="bold">{t('BNB Balance')}</Text>
+        <Text color="textSubtle">{t('BNB Balance')}</Text>
         {fetchStatus !== FetchStatus.SUCCESS ? (
           <Skeleton height="22px" width="60px" />
         ) : (
@@ -55,7 +49,7 @@ color: #F00B0B;
         )}
       </Flex>
       <Flex alignItems="center" justifyContent="space-between" mb="24px">
-        <Text color="textSubtle" fontWeight="bold">{t('PCM Balance')}</Text>
+        <Text color="textSubtle">{t('CAKE Balance')}</Text>
         {cakeFetchStatus !== FetchStatus.SUCCESS ? (
           <Skeleton height="22px" width="60px" />
         ) : (
@@ -65,9 +59,9 @@ color: #F00B0B;
       <Flex alignItems="center" justifyContent="end" mb="24px">
         <LinkExternal href={getBscScanLink(account, 'address')}>{t('View on BscScan')}</LinkExternal>
       </Flex>
-      <Button1 variant="secondary" width="100%" onClick={handleLogout}>
+      <Button variant="secondary" width="100%" onClick={handleLogout}>
         {t('Disconnect Wallet')}
-      </Button1>
+      </Button>
     </>
   )
 }

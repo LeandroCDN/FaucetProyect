@@ -18,6 +18,7 @@ const Address = styled.div`
   flex: 1;
   position: relative;
   padding-left: 16px;
+
   & > input {
     background: transparent;
     border: 0;
@@ -27,10 +28,12 @@ const Address = styled.div`
     font-size: 16px;
     padding: 0;
     width: 100%;
+
     &:focus {
       outline: 0;
     }
   }
+
   &:after {
     background: linear-gradient(
       to right,
@@ -96,7 +99,7 @@ const CopyAddress: React.FC<CopyAddressProps> = ({ account, ...props }) => {
           <CopyIcon color="primary" width="24px" />
         </IconButton>
       </Wrapper>
-      <Tooltip isTooltipDisplayed={isTooltipDisplayed}>{t('Copied to clipboard')}</Tooltip>
+      <Tooltip isTooltipDisplayed={isTooltipDisplayed}>{t('Copied')}</Tooltip>
     </Box>
   )
 }
