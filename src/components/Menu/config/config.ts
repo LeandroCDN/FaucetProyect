@@ -13,11 +13,13 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
     items: [
       {
         label: t('Exchange'),
-        href: '/swap',
+        href: 'https://pancakeswap.finance/swap',
+        type: DropdownMenuItemType.EXTERNAL_LINK,
       },
       {
         label: t('Liquidity'),
-        href: '/liquidity',
+        href: 'https://pancakeswap.finance/liquidity',
+        type: DropdownMenuItemType.EXTERNAL_LINK,
       },
     ],
   },
@@ -37,73 +39,64 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
     ],
   },
   {
-    label: t('Win'),
+    label: t('Projects'),
     href: '/prediction',
     icon: 'Trophy',
     items: [
       {
-        label: t('Prediction (BETA)'),
+        label: t('Ideas'),
         href: '/prediction',
       },
       {
-        label: t('Lottery'),
+        label: t('Developing'),
         href: '/lottery',
-      },
-    ],
-  },
-  {
-    label: t('NFT'),
-    href: `${nftsBaseUrl}`,
-    icon: 'Nft',
-    items: [
-      {
-        label: t('Overview'),
-        href: `${nftsBaseUrl}`,
         status: {
           text: t('Live'),
           color: 'failure',
         },
       },
       {
-        label: t('Bunnies'),
-        href: `${nftsBaseUrl}/collections/${pancakeBunniesAddress}`,
-      },
-      {
-        label: t('Squad'),
-        href: `${nftsBaseUrl}/collections/${pancakeSquadAddress}`,
+        label: t('Developed'),
+        href: '/lottery',
       },
     ],
   },
   {
-    label: '',
-    href: '/info',
-    icon: 'More',
-    hideSubNav: true,
+    label: t('Courses'),
+    href: `${nftsBaseUrl}`,
+    icon: 'Nft',
     items: [
       {
-        label: t('Info'),
-        href: '/info',
+        label: t('Purchase'),
+        href: `${nftsBaseUrl}`,
       },
       {
-        label: t('IFO'),
+        label: t('Upload'),
+        href: `${nftsBaseUrl}/collections/${pancakeBunniesAddress}`,
+      },
+    ],
+  },
+  {
+    label: 'Info',
+    href: '/info',
+    icon: 'More',
+    items: [
+      {
+        label: t('Contact us'),
         href: '/ifo',
       },
       {
-        label: t('Voting'),
-        href: '/voting',
-      },
-      {
-        type: DropdownMenuItemType.DIVIDER,
-      },
-      {
-        label: t('Leaderboard'),
-        href: '/teams',
-      },
-      {
-        type: DropdownMenuItemType.DIVIDER,
+        label: t('Community'),
+        href: '/ifo',
+        type: DropdownMenuItemType.EXTERNAL_LINK,
       },
       {
         label: t('Blog'),
+        href: '/voting',
+        type: DropdownMenuItemType.EXTERNAL_LINK,
+      },
+      {
+        label: t('GitHub'),
         href: 'https://pancakeswap.medium.com',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
