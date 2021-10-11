@@ -76,7 +76,7 @@ const StarsWrapper = styled.div`
 `
 
 const imagePath = '/images/home/lunar-bunny/'
-const imageSrc = 'bunny'
+const imageSrc = 'buho'
 
 const starsImage: CompositeImageProps = {
   path: '/images/home/lunar-bunny/',

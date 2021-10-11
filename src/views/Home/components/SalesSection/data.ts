@@ -2,7 +2,7 @@ import { SalesSectionProps } from '.'
 
 export const swapSectionData: SalesSectionProps = {
   headingText: 'Stake PCM',
-  bodyText: 'Obtain big rewards staking your PCM tokens on the app',
+  bodyText: 'Obtain big rewards staking your PCM tokens on farms and pools',
   reverse: false,
   primaryButton: {
     to: '/farms',
@@ -17,16 +17,14 @@ export const swapSectionData: SalesSectionProps = {
   images: {
     path: '/images/home/trade/',
     attributes: [
-      { src: 'BNB', alt: 'BNB token' },
-      { src: 'BTC', alt: 'BTC token' },
-      { src: 'CAKE', alt: 'CAKE token' },
+      { src: 'PCM', alt: 'PCM token' },
     ],
   },
 }
 
 export const earnSectionData: SalesSectionProps = {
   headingText: 'Influencers project',
-  bodyText: 'If you are a big influencer and you want to create your own project u will have an easy accepting in here!',
+  bodyText: 'If you are a big influencer and you want to create your own project you will have a private project!',
   reverse: true,
   primaryButton: {
     to: '/farms',
@@ -41,9 +39,9 @@ export const earnSectionData: SalesSectionProps = {
   images: {
     path: '/images/home/earn/',
     attributes: [
-      { src: 'pie', alt: 'Pie chart' },
-      { src: 'stonks', alt: 'Stocks chart' },
-      { src: 'folder', alt: 'Folder with cake token' },
+      { src: 'yt', alt: 'Yt logo' },
+      { src: 'ig', alt: 'Ig logo' },
+      { src: 'tw', alt: 'Tw logo' },
     ],
   },
 }
@@ -67,10 +65,8 @@ export const cakeSectionData: SalesSectionProps = {
   images: {
     path: '/images/home/cake/',
     attributes: [
-      { src: 'bottom-right', alt: 'Small 3d pancake' },
-      { src: 'top-right', alt: 'Small 3d pancake' },
-      { src: 'coin', alt: 'CAKE token' },
-      { src: 'top-left', alt: 'Small 3d pancake' },
+      { src: 'chart', alt: 'Chart' },
+      
     ],
   },
 }

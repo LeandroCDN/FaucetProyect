@@ -22,7 +22,7 @@ const StyledSubheading = styled(Heading)`
 
 const StyledHeading = styled(Heading)`
   color: #ffffff;
-  background: -webkit-linear-gradient(#7645d9 0%, #452a7a 100%);
+  background: -webkit-linear-gradient(#000A46 0%, #011BB6 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-stroke: 6px transparent;
@@ -33,7 +33,7 @@ const StyledHeading = styled(Heading)`
 const Wrapper = styled.div`
   border-radius: 32px;
   width: 100%;
-  background-image: linear-gradient(#1E3400, #9CCF16);
+  background-image: linear-gradient(#000A46, #00F7FF);
   max-height: max-content;
   overflow: hidden;
 `
@@ -81,7 +81,7 @@ const RightWrapper = styled.div`
   }
 `
 
-const CreateManage = () => {
+const FaucetBanner = () => {
   const { t } = useTranslation()
 
   return (
@@ -89,22 +89,22 @@ const CreateManage = () => {
       <Inner>
         <LeftWrapper>
           <StyledSubheading>Faucet</StyledSubheading>
-          <StyledHeading scale="xl">{t('Claim free PCM tokens every day')}</StyledHeading>
+          <StyledHeading scale="xl">{t('Claim free PCM tokens every day!')}</StyledHeading>
           <Link to="/faucet">
             <Button>
               <Text color="invertedContrast" bold fontSize="16px" mr="4px">
-                {t('Claim PCM')}
+                {t('Claim Free PCM')}
               </Text>
               <ArrowForwardIcon color="invertedContrast" />
             </Button>
           </Link>
         </LeftWrapper>
         <RightWrapper>
-          <img src="/images/decorations/pancakesquad.png" alt={t('Pancake Squad')} />
+          <img src="/images/decorations/owl.png" alt={t('Owl')} />
         </RightWrapper>
       </Inner>
     </Wrapper>
   )
 }
 
-export default CreateManage
+export default FaucetBanner
