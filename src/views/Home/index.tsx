@@ -8,13 +8,11 @@ import Container from 'components/Layout/Container'
 import { PageMeta } from 'components/Layout/Page'
 import Hero from './components/Hero'
 import { swapSectionData, earnSectionData, cakeSectionData } from './components/SalesSection/data'
-import MetricsSection from './components/MetricsSection'
 import SalesSection from './components/SalesSection'
-import FarmsPoolsRow from './components/FarmsPoolsRow'
 import Footer from './components/Footer'
 import CakeDataRow from './components/CakeDataRow'
 import { WedgeTopLeft, InnerWedgeWrapper, OuterWedgeWrapper, WedgeTopRight } from './components/WedgeSvgs'
-import PancakeSquadBanner from './components/Banners/PancakeSquadBanner'
+import CreateManage from './components/Banners/CreateManage'
 
 const StyledHeroSection = styled(PageSection)`
   padding-top: 16px;
@@ -49,22 +47,11 @@ const Home: React.FC = () => {
           mt={[account ? '0' : '-16px', null, null, account ? '0' : '-48px']}
           pb="24px"
         >
-          <PancakeSquadBanner />
+          <CreateManage />
         </Flex>
         <Hero />
       </StyledHeroSection>
-      <PageSection
-        innerProps={{ style: { margin: '0', width: '100%' } }}
-        background={
-          theme.isDark
-            ? 'linear-gradient(180deg, #09070C 22%, #201335 100%)'
-            : 'linear-gradient(180deg, #FFFFFF 22%, #D7CAEC 100%)'
-        }
-        index={2}
-        hasCurvedDivider={false}
-      >
-        <MetricsSection />
-      </PageSection>
+      
       <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
         background={theme.colors.background}
@@ -90,9 +77,7 @@ const Home: React.FC = () => {
           </InnerWedgeWrapper>
         </OuterWedgeWrapper>
         <SalesSection {...earnSectionData} />
-        <FarmsPoolsRow />
       </PageSection>
-
       <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
         background={theme.colors.background}

@@ -35,20 +35,24 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
         label: 'Pools',
         href: '/pools',
       },
+      {
+        label: 'Faucet',
+        href: '/faucet',
+      },
     ],
   },
   {
     label: 'Projects',
-    href: '/projects',
+    href: '/ideas',
     icon: 'Trophy',
     items: [
       {
         label: 'Ideas',
-        href: '/projects',
+        href: '/ideas',
       },
       {
         label: 'Developing',
-        href: '/projects',
+        href: '/developing',
         status: {
           text: 'Live',
           color: 'failure',
@@ -56,52 +60,52 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
       },
       {
         label: 'Developed',
-        href: '/projects',
+        href: '/developed',
       },
     ],
   },
   {
     label: 'Courses',
-    href: `/courses}`,
+    href: `/purchase}`,
     icon: 'Nft',
     items: [
       {
         label: 'Purchase',
-        href: `/courses`,
+        href: `/purchase`,
       },
       {
         label: 'Upload',
-        href: `/courses`,
+        href: `/upload`,
       },
     ],
   },
   {
     label: 'Info',
-    href: '/info',
+    href: '/contact',
     icon: 'More',
     items: [
       {
         label: 'Contact us',
-        href: '/info',
+        href: '/contact',
       },
       {
         label: 'Community',
-        href: '/info',
+        href: '/contact',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
       {
         label: 'Blog',
-        href: '/info',
+        href: '/contact',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
       {
         label: 'GitHub',
-        href: '/info',
+        href: '/contact',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
       {
         label: 'Docs',
-        href: '/info',
+        href: '/contact',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
     ],

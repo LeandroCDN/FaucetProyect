@@ -17,16 +17,28 @@ import PageLoader from './components/Loader/PageLoader'
 import EasterEgg from './components/EasterEgg'
 import GlobalCheckClaimStatus from './components/GlobalCheckClaimStatus'
 import history from './routerHistory'
-// Views included in the main bundle
-import Pools from './views/Pools' 
-
+ 
 // Route-based code splitting
-// Only pool is included in the main bundle because of it's the most visited page
-const Home = lazy(() => import('./views/Home'))
+const Home = lazy(() => import('./views/Home')) 
+
+// Earn
 const Farms = lazy(() => import('./views/Farms'))
-const Projects = lazy(() => import('./views/Projects'))
-const Courses = lazy(() => import('./views/Courses'))
-const Info = lazy(() => import('./views/Info'))
+const Pools = lazy(() => import('./views/Pools'))
+const Faucet = lazy(() => import('./views/Faucet')) 
+
+// Projects
+const Ideas = lazy(() => import('./views/Ideas'))
+const Developing = lazy(() => import('./views/Developing'))
+const Developed = lazy(() => import('./views/Developed'))
+
+// Courses
+const Purchase = lazy(() => import('./views/Purchase'))
+const Upload = lazy(() => import('./views/Upload'))
+
+// Info
+const Contact = lazy(() => import('./views/Contact'))
+
+// 404
 const NotFound = lazy(() => import('./views/NotFound'))
 
 // This config is required for number formatting
@@ -61,19 +73,31 @@ const App: React.FC = () => {
             <Route path="/pools">
               <Pools />
             </Route>
-            <Route path="/projects">
-              <Projects />
+            <Route path="/faucet">
+              <Faucet />
             </Route>
-            <Route path="/courses">
-              <Courses />
+            <Route path="/ideas">
+              <Ideas />
             </Route>
-            <Route path="/info">
-              <Courses />
+            <Route path="/developing">
+              <Developing />
+            </Route>
+            <Route path="/developed">
+              <Developed />
+            </Route>
+            <Route path="/purchase">
+              <Purchase />
+            </Route>
+            <Route path="/upload">
+              <Upload />
+            </Route>
+            <Route path="/contact">
+              <Contact />
             </Route>
       
             {/* Redirect */}
             <Route path="/farming">
-              <Redirect to="/farms" />
+              <Redirect to="/farms" /> 
             </Route>
             <Route path="/farm">
               <Redirect to="/farms" />
@@ -86,6 +110,37 @@ const App: React.FC = () => {
             </Route>
             <Route path="/syrup">
               <Redirect to="/pools" />
+            </Route>
+
+            <Route path="/project">
+              <Redirect to="/ideas" />
+            </Route>
+            <Route path="/projects">
+              <Redirect to="/ideas" />
+            </Route>
+
+            <Route path="/courses">
+              <Redirect to="/purchase" /> 
+            </Route>
+            <Route path="/course">
+              <Redirect to="/purchase" />
+            </Route>
+            <Route path="/uploads">
+              <Redirect to="/upload" />
+            </Route>
+
+            <Route path="/project">
+              <Redirect to="/ideas" />
+            </Route>
+            <Route path="/projects">
+              <Redirect to="/ideas" />
+            </Route>
+
+            <Route path="/info">
+              <Redirect to="/contact" />
+            </Route>
+            <Route path="/infos">
+              <Redirect to="/contact" />
             </Route>
 
             {/* 404 */}

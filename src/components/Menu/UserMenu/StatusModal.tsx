@@ -12,7 +12,6 @@ import {
   ModalTitle,
 } from '@pancakeswap/uikit'
 import { parseUnits } from 'ethers/lib/utils'
-import { useTranslation } from 'contexts/Localization'
 import styled from 'styled-components'
 import StatusProjects from './StatusProjects'
 import StatusCourses from './StatusCourses'
@@ -38,17 +37,16 @@ const Tabs = styled.div`
 
 const StatusModal: React.FC<WalletModalProps> = ({ initialView = WalletViews.PROJECTS, onDismiss }) => {
   const [view, setView] = useState(initialView)
-  const { t } = useTranslation()
 
   const handleClick = (newIndex: number) => {
     setView(newIndex)
   }
 
   return (
-    <ModalContainer title={t('IdeaManager')} minWidth="320px">
+    <ModalContainer title="IdeaManager" minWidth="320px">
       <ModalHeader>
         <ModalTitle>
-          <Heading>{t('Your Status')}</Heading>
+          <Heading>Your Status</Heading>
         </ModalTitle>
         <IconButton variant="text" onClick={onDismiss}>
           <CloseIcon width="24px" color="text" />
@@ -56,12 +54,12 @@ const StatusModal: React.FC<WalletModalProps> = ({ initialView = WalletViews.PRO
       </ModalHeader>
       <Tabs>
         <ButtonMenu scale="sm" variant="subtle" onItemClick={handleClick} activeIndex={view} fullWidth>
-          <ButtonMenuItem>{t('Projects')}</ButtonMenuItem>
-          <ButtonMenuItem>{t('Courses')}</ButtonMenuItem>
+          <ButtonMenuItem>Projects</ButtonMenuItem>
+          <ButtonMenuItem>Courses</ButtonMenuItem>
         </ButtonMenu>
       </Tabs>
       <ModalBody p="24px" maxWidth="400px" width="100%">
-        {view === WalletViews.PROJECTS && <StatusCourses />}
+        {view === WalletViews.PROJECTS && <StatusProjects />}  
         {view === WalletViews.COURSES && <StatusCourses />}
       </ModalBody>
     </ModalContainer>

@@ -9,7 +9,7 @@ import { clearAllTransactions } from 'state/transactions/actions'
 import { orderBy } from 'lodash'
 import TransactionRow from './TransactionRow'
 
-const WalletTransactions: React.FC = () => {
+const StatusCourses: React.FC = () => {
   const { chainId } = useActiveWeb3React()
   const dispatch = useDispatch<AppDispatch>()
   const { t } = useTranslation()
@@ -25,22 +25,27 @@ const WalletTransactions: React.FC = () => {
   return (
     <Box minHeight="120px">
       <Flex alignItems="center" justifyContent="space-between" mb="24px">
-        <Text color="secondary" fontSize="12px" textTransform="uppercase" fontWeight="bold">
-          {t('Recent Transactions')}
-        </Text>
-        {sortedTransactions.length > 0 && (
-          <Button scale="sm" onClick={handleClearAll} variant="text" px="0">
-            {t('Clear all')}
-          </Button>
-        )}
+        <Text color="secondary" fontSize="12px" textTransform="uppercase" fontWeight="bold">Your courses purchased</Text>
+        {sortedTransactions.length}
       </Flex>
       {sortedTransactions.length > 0 ? (
         sortedTransactions.map((txn) => <TransactionRow key={txn.hash} txn={txn} />)
       ) : (
-        <Text textAlign="center">{t('No recent transactions')}</Text>
+        <Text textAlign="center">{t('No courses purchases')}</Text>
+      )}
+
+
+      <Flex alignItems="center" justifyContent="space-between" mb="24px">
+        <Text color="secondary" fontSize="12px" textTransform="uppercase" fontWeight="bold">Your courses uploaded</Text>
+        {sortedTransactions.length}
+      </Flex>
+      {sortedTransactions.length > 0 ? (
+        sortedTransactions.map((txn) => <TransactionRow key={txn.hash} txn={txn} />)
+      ) : (
+        <Text textAlign="center">{t('No courses uploaded')}</Text>
       )}
     </Box>
   )
 }
 
-export default WalletTransactions
+export default StatusCourses

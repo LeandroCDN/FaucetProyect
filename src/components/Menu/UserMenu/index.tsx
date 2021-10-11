@@ -24,9 +24,9 @@ const UserMenu = () => {
   const { balance, fetchStatus } = useGetBnbBalance()
   const [onPresentWalletModal] = useModal(<WalletModal initialView={WalletView.WALLET_INFO} />)
   const [onPresentTransactionModal] = useModal(<WalletModal initialView={WalletView.TRANSACTIONS} />)
+  const hasLowBnbBalance = fetchStatus === FetchStatus.SUCCESS && balance.lte(LOW_BNB_BALANCE)
   const [onPresentProjectsModal] = useModal(<StatusModal initialView={WalletViews.PROJECTS} />)
   const [onPresentCoursesModal] = useModal(<StatusModal initialView={WalletViews.COURSES} />)
-  const hasLowBnbBalance = fetchStatus === FetchStatus.SUCCESS && balance.lte(LOW_BNB_BALANCE)
 
   if (!account) {
     return <ConnectWalletButton scale="md" />

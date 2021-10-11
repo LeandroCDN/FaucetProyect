@@ -1,12 +1,12 @@
 import { SalesSectionProps } from '.'
 
 export const swapSectionData: SalesSectionProps = {
-  headingText: 'Trade anything. No registration, no hassle.',
-  bodyText: 'Trade any token on Binance Smart Chain in seconds, just by connecting your wallet.',
+  headingText: 'Stake PCM',
+  bodyText: 'Obtain big rewards staking your PCM tokens on the app',
   reverse: false,
   primaryButton: {
-    to: '/swap',
-    text: 'Trade Now',
+    to: '/farms',
+    text: 'Stake Now',
     external: false,
   },
   secondaryButton: {
@@ -25,12 +25,12 @@ export const swapSectionData: SalesSectionProps = {
 }
 
 export const earnSectionData: SalesSectionProps = {
-  headingText: 'Earn passive income with crypto.',
-  bodyText: 'PancakeSwap makes it easy to make your crypto work for you.',
+  headingText: 'Influencers project',
+  bodyText: 'If you are a big influencer and you want to create your own project u will have an easy accepting in here!',
   reverse: true,
   primaryButton: {
     to: '/farms',
-    text: 'Explore',
+    text: 'Start Now',
     external: false,
   },
   secondaryButton: {
@@ -49,18 +49,18 @@ export const earnSectionData: SalesSectionProps = {
 }
 
 export const cakeSectionData: SalesSectionProps = {
-  headingText: 'CAKE makes our world go round.',
+  headingText: 'PCM makes our world go round.',
   bodyText:
-    'CAKE token is at the heart of the PancakeSwap ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!',
+    'Purchase now your PCM tokens to manage projects on the app',
   reverse: false,
   primaryButton: {
     to: '/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
-    text: 'Buy CAKE',
+    text: 'Buy PCM',
     external: false,
   },
   secondaryButton: {
-    to: 'https://docs.pancakeswap.finance/tokenomics/cake',
-    text: 'Learn',
+    to: 'https://poocoin.app',
+    text: 'Chart',
     external: true,
   },
 

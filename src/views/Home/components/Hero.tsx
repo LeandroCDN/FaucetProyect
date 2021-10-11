@@ -107,15 +107,15 @@ const Hero = () => {
       >
         <Flex flex="1" flexDirection="column">
           <Heading scale="xxl" color="secondary" mb="24px">
-            {t('The moon is made of pancakes.')}
+            {t('Enjoy learning and developing projects on the blockchain')}
           </Heading>
           <Heading scale="md" mb="24px">
-            {t('Trade, earn, and win crypto on the most popular decentralized platform in the galaxy.')}
+            {t('View or upload your own courses, you will get rewarded!')}
           </Heading>
           <Flex>
             {!account && <ConnectWalletButton mr="8px" />}
-            <Link to="/swap">
-              <Button variant={!account ? 'secondary' : 'primary'}>{t('Trade Now')}</Button>
+            <Link to="/courses">
+              <Button variant={!account ? 'secondary' : 'primary'}>{t('View Courses')}</Button>
             </Link>
           </Flex>
         </Flex>
