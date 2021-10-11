@@ -1,12 +1,12 @@
 import { SalesSectionProps } from '.'
 
 export const swapSectionData: SalesSectionProps = {
-  headingText: 'Stake PCM',
-  bodyText: 'Obtain big rewards staking your PCM tokens on farms and pools',
+  headingText: 'Manage your project ideas!',
+  bodyText: 'Create and vote proyect ideas with PCM tokens',
   reverse: false,
   primaryButton: {
-    to: '/farms',
-    text: 'Stake Now',
+    to: '/ideas',
+    text: 'Vote Ideas',
     external: false,
   },
   secondaryButton: {
@@ -27,7 +27,7 @@ export const earnSectionData: SalesSectionProps = {
   bodyText: 'If you are a big influencer and you want to create your own project you will have a private project!',
   reverse: true,
   primaryButton: {
-    to: '/farms',
+    to: '/ideas',
     text: 'Start Now',
     external: false,
   },
@@ -47,21 +47,21 @@ export const earnSectionData: SalesSectionProps = {
 }
 
 export const cakeSectionData: SalesSectionProps = {
-  headingText: 'PCM makes our world go round.',
+  headingText: 'Proyect Coin Manager',
   bodyText:
-    'Purchase now your PCM tokens to manage projects on the app',
+    'Purchase now your PCM tokens to manage projects and stake it to obtain rewards!',
   reverse: false,
   primaryButton: {
-    to: '/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
-    text: 'Buy PCM',
+    to: '/farms',
+    text: 'Stake PCM',
     external: false,
   },
   secondaryButton: {
-    to: 'https://poocoin.app',
-    text: 'Chart',
+    to: 'https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
+    text: 'Buy',
     external: true,
   },
-
+ 
   images: {
     path: '/images/home/cake/',
     attributes: [
