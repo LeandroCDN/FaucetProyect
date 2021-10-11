@@ -9,11 +9,9 @@ import {
   LotteryTicket,
   DeserializedPoolConfig,
   SerializedPoolConfig,
-  Team,
   TranslatableText,
   DeserializedFarmConfig,
 } from 'config/constants/types'
-import { NftToken, State as NftMarketState } from './nftMarket/types'
 
 export type AppThunk<ReturnType = void> = ThunkAction<ReturnType, State, unknown, AnyAction>
 
@@ -27,8 +25,8 @@ export type SerializedBigNumber = string
 interface SerializedFarmUserData {
   allowance: string
   tokenBalance: string
-  stakedBalance: string
-  earnings: string
+  stakedBalance: string 
+  earnings: string 
 }
 
 export interface DeserializedFarmUserData {
@@ -91,18 +89,6 @@ export interface SerializedPool extends SerializedPoolConfig, CorePoolProps {
   }
 }
 
-export interface Profile {
-  userId: number
-  points: number
-  teamId: number
-  collectionAddress: string
-  tokenId: number
-  isActive: boolean
-  username: string
-  nft?: NftToken
-  team: Team
-  hasRegistered: boolean
-}
 
 // Slices states
 
@@ -154,39 +140,6 @@ export enum ProfileAvatarFetchStatus {
   FETCHED = 'fetched',
 }
 
-export interface ProfileState {
-  isInitialized: boolean
-  isLoading: boolean
-  hasRegistered: boolean
-  data: Profile
-  profileAvatars: {
-    [key: string]: {
-      username: string
-      nft: NftToken
-      hasRegistered: boolean
-      usernameFetchStatus: ProfileAvatarFetchStatus
-      avatarFetchStatus: ProfileAvatarFetchStatus
-    }
-  }
-}
-
-export type TeamResponse = {
-  0: string
-  1: string
-  2: string
-  3: string
-  4: boolean
-}
-
-export type TeamsById = {
-  [key: string]: Team
-}
-
-export interface TeamsState {
-  isInitialized: boolean
-  isLoading: boolean
-  data: TeamsById
-}
 
 export interface Achievement {
   id: string
@@ -568,10 +521,4 @@ export interface State {
   block: BlockState
   farms: SerializedFarmsState
   pools: PoolsState
-  predictions: PredictionsState
-  profile: ProfileState
-  teams: TeamsState
-  voting: VotingState
-  lottery: LotteryState
-  nftMarket: NftMarketState
 }

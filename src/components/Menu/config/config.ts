@@ -1,78 +1,77 @@
 import { MenuItemsType, DropdownMenuItemType } from '@pancakeswap/uikit'
 import { ContextApi } from 'contexts/Localization/types'
-import { nftsBaseUrl, pancakeBunniesAddress, pancakeSquadAddress } from 'views/Nft/market/constants'
 
 export type ConfigMenuItemsType = MenuItemsType & { hideSubNav?: boolean }
 
 const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
   {
-    label: t('Trade'),
-    icon: 'Swap',
+    label: 'Trade',
     href: '/swap',
+    icon: 'Swap',
     showItemsOnMobile: false,
     items: [
       {
-        label: t('Exchange'),
+        label: 'Exchange',
         href: 'https://pancakeswap.finance/swap',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
       {
-        label: t('Liquidity'),
+        label: 'Liquidity',
         href: 'https://pancakeswap.finance/liquidity',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
     ],
   },
   {
-    label: t('Earn'),
+    label: 'Earn',
     href: '/farms',
     icon: 'Earn',
     items: [
       {
-        label: t('Farms'),
+        label: 'Farms',
         href: '/farms',
       },
       {
-        label: t('Pools'),
+        label: 'Pools',
         href: '/pools',
       },
     ],
   },
   {
-    label: t('Projects'),
-    href: '/prediction',
+    label: 'Projects',
+    href: '/projects',
     icon: 'Trophy',
     items: [
       {
-        label: t('Ideas'),
-        href: '/prediction',
+        label: 'Ideas',
+        href: '/projects',
       },
       {
-        label: t('Developing'),
-        href: '/lottery',
+        label: 'Developing',
+        href: '/projects',
         status: {
-          text: t('Live'),
+          text: 'Live',
           color: 'failure',
         },
       },
       {
-        label: t('Developed'),
-        href: '/lottery',
+        label: 'Developed',
+        href: '/projects',
       },
     ],
   },
   {
-    label: t('Courses'),
-    href: `${nftsBaseUrl}`,
+    label: 'Courses',
+    href: `/courses}`,
     icon: 'Nft',
     items: [
       {
-        label: t('Purchase'),
-        href: `${nftsBaseUrl}`,
+        label: 'Purchase',
+        href: `/courses`,
       },
       {
-        label: t('Upload'),
-        href: `${nftsBaseUrl}/collections/${pancakeBunniesAddress}`,
+        label: 'Upload',
+        href: `/courses`,
       },
     ],
   },
@@ -82,27 +81,27 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
     icon: 'More',
     items: [
       {
-        label: t('Contact us'),
-        href: '/ifo',
+        label: 'Contact us',
+        href: '/info',
       },
       {
-        label: t('Community'),
-        href: '/ifo',
+        label: 'Community',
+        href: '/info',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
       {
-        label: t('Blog'),
-        href: '/voting',
+        label: 'Blog',
+        href: '/info',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
       {
-        label: t('GitHub'),
-        href: 'https://pancakeswap.medium.com',
+        label: 'GitHub',
+        href: '/info',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
       {
-        label: t('Docs'),
-        href: 'https://docs.pancakeswap.finance',
+        label: 'Docs',
+        href: '/info',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
     ],

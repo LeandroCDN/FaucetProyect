@@ -33,7 +33,7 @@ const StyledHeading = styled(Heading)`
 const Wrapper = styled.div`
   border-radius: 32px;
   width: 100%;
-  background-image: linear-gradient(#7645d9, #452a7a);
+  background-image: linear-gradient(#1E3400, #9CCF16);
   max-height: max-content;
   overflow: hidden;
 `
@@ -88,12 +88,12 @@ const PancakeSquadBanner = () => {
     <Wrapper>
       <Inner>
         <LeftWrapper>
-          <StyledSubheading>PancakeSquad NFT</StyledSubheading>
-          <StyledHeading scale="xl">{t('Now Live')}</StyledHeading>
-          <Link to="/pancake-squad">
+          <StyledSubheading>Create & Manage</StyledSubheading>
+          <StyledHeading scale="xl">{t('Manage your proyect idea on the blockchain with PCM tokens!')}</StyledHeading>
+          <Link to="/projects">
             <Button>
               <Text color="invertedContrast" bold fontSize="16px" mr="4px">
-                {t('Learn more')}
+                {t('Manage a project')}
               </Text>
               <ArrowForwardIcon color="invertedContrast" />
             </Button>

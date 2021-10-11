@@ -7,8 +7,7 @@ import useEagerConnect from 'hooks/useEagerConnect'
 import useUserAgent from 'hooks/useUserAgent'
 import useScrollOnRouteChange from 'hooks/useScrollOnRouteChange'
 import { usePollBlockNumber } from 'state/block/hooks'
-import { usePollCoreFarmData } from 'state/farms/hooks'
-import { useFetchProfile } from 'state/profile/hooks'
+import { usePollCoreFarmData } from 'state/farms/hooks' 
 import { DatePickerPortal } from 'components/DatePicker'
 import GlobalStyle from './style/Global'
 import Menu from './components/Menu'
@@ -19,14 +18,15 @@ import EasterEgg from './components/EasterEgg'
 import GlobalCheckClaimStatus from './components/GlobalCheckClaimStatus'
 import history from './routerHistory'
 // Views included in the main bundle
-import Pools from './views/Pools'
+import Pools from './views/Pools' 
 
 // Route-based code splitting
 // Only pool is included in the main bundle because of it's the most visited page
 const Home = lazy(() => import('./views/Home'))
 const Farms = lazy(() => import('./views/Farms'))
-// const Projects = lazy(() => import('./views/Projects'))
-// const Courses = lazy(() => import('./views/Courses'))
+const Projects = lazy(() => import('./views/Projects'))
+const Courses = lazy(() => import('./views/Courses'))
+const Info = lazy(() => import('./views/Info'))
 const NotFound = lazy(() => import('./views/NotFound'))
 
 // This config is required for number formatting
@@ -39,8 +39,7 @@ const App: React.FC = () => {
   const { account } = useWeb3React()
 
   usePollBlockNumber()
-  useEagerConnect()
-  useFetchProfile()
+  useEagerConnect()  
   usePollCoreFarmData()
   useScrollOnRouteChange()
   useUserAgent()
@@ -62,12 +61,15 @@ const App: React.FC = () => {
             <Route path="/pools">
               <Pools />
             </Route>
-            {/* <Route path="/projects">
+            <Route path="/projects">
               <Projects />
             </Route>
             <Route path="/courses">
               <Courses />
-            </Route> */}
+            </Route>
+            <Route path="/info">
+              <Courses />
+            </Route>
       
             {/* Redirect */}
             <Route path="/farming">
