@@ -374,12 +374,12 @@ const Farms: React.FC = () => {
           {t('Farms')}
         </Heading>
         <Heading scale="lg" color="text">
-          {t('Stake LP tokens to earn.')}
+          {t('Stake LP tokens to earn PCM.')}
         </Heading>
         <NavLink exact activeClassName="active" to="/farms/auction" id="lottery-pot-banner">
           <Button p="0" variant="text">
             <Text color="primary" bold fontSize="16px" mr="4px">
-              {t('Community Auctions')}
+              {t('Do you have a project?')}
             </Text>
             <ArrowForwardIcon color="primary" />
           </Button>
