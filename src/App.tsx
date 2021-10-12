@@ -28,7 +28,7 @@ const Faucet = lazy(() => import('./views/Faucet'))
 
 // Projects
 const Ideas = lazy(() => import('./views/Ideas'))
-const Developing = lazy(() => import('./views/Developing'))
+const Developing = lazy(() => import('./views/Developing')) 
 const Developed = lazy(() => import('./views/Developed'))
 
 // Courses

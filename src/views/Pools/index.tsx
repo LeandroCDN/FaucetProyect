@@ -1,11 +1,11 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { Route, useRouteMatch, useLocation, NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { ethers } from 'ethers'
 import { formatUnits } from 'ethers/lib/utils'
 import BigNumber from 'bignumber.js'
 import { useWeb3React } from '@web3-react/core'
-import { Heading, Flex, Image, Text } from '@pancakeswap/uikit'
+import { Image, Heading, RowType, Toggle, Text, Button, ArrowForwardIcon, Flex } from '@pancakeswap/uikit'
 import orderBy from 'lodash/orderBy'
 import partition from 'lodash/partition'
 import { useTranslation } from 'contexts/Localization'
@@ -262,7 +262,16 @@ const Pools: React.FC = () => {
             <Heading scale="md" color="text">
               {t('High APR, low risk.')}
             </Heading>
+            <NavLink exact activeClassName="active" to="/farms/auction" id="lottery-pot-banner">
+              <Button p="0" variant="text">
+                <Text color="primary" bold fontSize="16px" mr="4px">
+                  {t('Do you have a project?')}
+                </Text>
+            <ArrowForwardIcon color="primary" />
+          </Button>
+        </NavLink>
           </Flex>
+          
           <Flex flex="1" height="fit-content" justifyContent="center" alignItems="center" mt={['24px', null, '0']}>
             <HelpButton />
             <BountyCard />

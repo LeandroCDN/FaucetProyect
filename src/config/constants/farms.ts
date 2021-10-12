@@ -50,17 +50,6 @@ const farms: SerializedFarmConfig[] = [
     token: serializedTokens.beta,
     quoteToken: serializedTokens.wbnb,
   },
-  {
-    pid: 460,
-    lpSymbol: 'LIGHT-BNB LP',
-    lpAddresses: {
-      97: '',
-      56: '0xD469F2E7d1329836733aDBAc6B53E09b775a6e03',
-    },
-    token: serializedTokens.light,
-    quoteToken: serializedTokens.wbnb,
-    isCommunity: true,
-  },
 ]
 
 export default farms
