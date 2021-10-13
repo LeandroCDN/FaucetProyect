@@ -29,6 +29,7 @@ import {
   getNftMarketAddress,
   getNftSaleAddress,
   getPancakeSquadAddress,
+  getFaucetAddress,
 } from 'utils/addressHelpers'
 
 // ABI
@@ -63,6 +64,7 @@ import anniversaryAchievementAbi from 'config/abi/anniversaryAchievement.json'
 import nftMarketAbi from 'config/abi/nftMarket.json'
 import nftSaleAbi from 'config/abi/nftSale.json'
 import pancakeSquadAbi from 'config/abi/pancakeSquad.json'
+import FaucetAbi from 'config/abi/Faucet.json'
 import { ChainLinkOracleContract, FarmAuctionContract, PancakeProfileContract, PredictionsContract } from './types'
 
 const getContract = (abi: any, address: string, signer?: ethers.Signer | ethers.providers.Provider) => {
@@ -164,4 +166,7 @@ export const getNftSaleContract = (signer?: ethers.Signer | ethers.providers.Pro
 }
 export const getPancakeSquadContract = (signer?: ethers.Signer | ethers.providers.Provider) => {
   return getContract(pancakeSquadAbi, getPancakeSquadAddress(), signer)
+}
+export const getFaucetContract = (signer?: ethers.Signer | ethers.providers.Provider) => {
+  return getContract(FaucetAbi, getFaucetAddress(), signer)
 }

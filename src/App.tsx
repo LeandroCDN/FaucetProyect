@@ -24,7 +24,9 @@ const Home = lazy(() => import('./views/Home'))
 // Earn
 const Farms = lazy(() => import('./views/Farms'))
 const Pools = lazy(() => import('./views/Pools'))
-const Faucet = lazy(() => import('./views/Faucet')) 
+// const Faucet = lazy(() => import('./views/Faucet'))   
+
+const Faucet2 = lazy(() => import('./views/Faucet2/Landing'));
 
 // Projects
 const Ideas = lazy(() => import('./views/Ideas'))
@@ -46,7 +48,7 @@ BigNumber.config({
   EXPONENTIAL_AT: 1000,
   DECIMAL_PLACES: 80,
 })
-
+       
 const App: React.FC = () => {
   const { account } = useWeb3React()
 
@@ -72,9 +74,9 @@ const App: React.FC = () => {
             </Route>
             <Route path="/pools">
               <Pools />
-            </Route>
+            </Route> 
             <Route path="/faucet">
-              <Faucet />
+              <Faucet2 />
             </Route>
             <Route path="/ideas">
               <Ideas />

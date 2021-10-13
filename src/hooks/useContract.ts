@@ -29,6 +29,7 @@ import {
   getNftMarketContract,
   getNftSaleContract,
   getPancakeSquadContract,
+  getFaucetContract,
 } from 'utils/contractHelpers'
 import { getMulticallAddress, getPancakeRabbitsAddress, getPancakeSquadAddress } from 'utils/addressHelpers'
 
@@ -180,6 +181,11 @@ export const usePancakeSquadContract = () => {
   const { library } = useActiveWeb3React()
   return useMemo(() => getPancakeSquadContract(library.getSigner()), [library])
 }
+
+export const useFaucetContract = () => {
+  const { library } = useActiveWeb3React();
+  return useMemo(() => getFaucetContract(library.getSigner()), [library])
+};
 
 export const useFarmAuctionContract = () => {
   const { account, library } = useActiveWeb3React()
